@@ -55,7 +55,7 @@ ROOT_URLCONF = 'travelwithme.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['citiesapp/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
