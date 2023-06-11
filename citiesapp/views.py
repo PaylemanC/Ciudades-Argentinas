@@ -5,9 +5,11 @@ from .models import *
 
 # Create your views here.
 def index(request):
-    cities = City.objects.all()
-    # City.objects.get(id=2) 
-    # City.objects.filter(name='Córdoba Capital')
-
     # return HttpResponse('Hola mundo!')
-    return render(request, 'cities.html')
+    cities = City.objects.all()
+    return render(request, 'cities.html', {'cities': cities})
+
+def get_city(request, id):
+    city = City.objects.get(id=id)
+    # City.objects.filter(name='Córdoba Capital')
+    return render(request, 'city.html', {'city': city})

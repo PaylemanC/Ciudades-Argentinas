@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings # Para que haga render de imágenes.
+from django.conf.urls.static import static # Para que haga render de imágenes.
 
 urlpatterns = [
     path('', include('citiesapp.urls')),
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # Para que haga render de imágenes.
