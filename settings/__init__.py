@@ -1,0 +1,1 @@
+# Archivo de inicialización de la carpeta de configuración (settings)
